@@ -20,6 +20,8 @@ const LanguageSwitcher = () => {
     localStorage.setItem("language", lang);
     i18n.changeLanguage(lang);
     setIsOpen(false);
+    // Dispatch custom event for dynamic content update
+    window.dispatchEvent(new Event("languageChanged"));
   };
 
   if (!mounted) return null;

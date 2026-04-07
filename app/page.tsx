@@ -1,5 +1,6 @@
 "use client";
 import Navbar from "../components/Navbar";
+import DynamicContent from "../components/DynamicContent";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
 import { ThemeProvider } from "next-themes";
@@ -44,6 +45,11 @@ function HomeContent() {
             <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               {t("hireMeDesc")}
             </p>
+            <DynamicContent
+              content="Hello, Imdadul Haque"
+              tag="p"
+              className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-2"
+            />
           </div>
         </section>
 
